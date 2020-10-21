@@ -1,0 +1,77 @@
+package seleniumTest;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+public class TestPom {
+
+	
+	@FindBy(className ="login")
+	public WebElement login;
+	
+	@FindBy(xpath="//*[@id=\"login_form\"]/h3")
+	public WebElement register;
+	
+	@FindBy(id ="email")
+	public WebElement email;
+	
+	@FindBy(id ="passwd")
+	public WebElement password;
+	
+	@FindBy(id ="SubmitLogin")
+	public WebElement submit;
+	
+	@FindBy(xpath ="//*[@id=\"footer\"]/div/section[5]/div/ul/li[3]/a")
+	public WebElement address;
+	
+	@FindBy(xpath ="//*[@id=\"center_column\"]/div[2]/a")
+	public WebElement addaddress;
+	
+	@FindBy(id ="address1")
+	public WebElement address1;
+	
+	@FindBy(id ="address2")
+	public WebElement address2;
+	
+	@FindBy(id ="city")
+	public WebElement city;
+	
+	@FindBy(id ="postcode")
+	public WebElement postcode;
+	
+	@FindBy(id ="phone")
+	public WebElement phone;
+	
+	@FindBy(id ="phone_mobile")
+	public WebElement phoneMobile;
+	
+	@FindBy(id ="other")
+	public WebElement addinfo;
+	
+	@FindBy(id ="alias")
+	public WebElement alias;
+	
+	@FindBy(id="id_state")
+	public WebElement state;
+	
+	@FindBy(id="submitAddress")
+	public WebElement submitadd;
+	
+	@FindBy(id="list")
+	public WebElement listview;
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+}

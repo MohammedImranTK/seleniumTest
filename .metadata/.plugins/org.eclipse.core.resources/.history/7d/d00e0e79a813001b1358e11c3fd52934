@@ -1,0 +1,58 @@
+package seleniumTest;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+import org.openqa.selenium.support.PageFactory;
+
+public class test {
+	
+	static WebDriver driver;
+	
+	
+	@BeforeClass
+	public static  void bclass(){
+		System.setProperty("webdriver.chrome.driver","drivers/chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		
+	
+	}
+	
+	@Test
+	public void t1() throws InterruptedException{
+		
+		driver.get("http://automationpractice.com/index.php");
+		TestPom demo=PageFactory.initElements(driver, TestPom.class);
+		
+		String title=driver.getTitle();
+		Assert.assertEquals("My Store", title);
+		demo.Login.click();
+		Thread.sleep(3000);
+		String register =demo.register.getText();
+		Assert.assertEquals("Already registered?", register);
+		
+		
+		demo.email.sendKeys("mohammedimrantk31@gmail.com");
+		demo.password.sendKeys("testing");
+		
+		
+		
+		
+		
+		
+		Thread.sleep(3000);
+		
+		
+	
+	}
+	
+	
+	
+
+}

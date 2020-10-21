@@ -1,0 +1,17 @@
+package seleniumTest;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+public class TestPom {
+
+	
+	@FindBy(className ="login")
+	public WebElement Login;
+	
+	@FindBy(xpath="//*[@id=\'login_form\']/h3")
+	public WebElement register;
+	
+	
+
+}
